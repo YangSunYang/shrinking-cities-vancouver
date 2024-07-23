@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vancouver DENSITY CHANGE MAP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="map-overlay" id="features">
+      <h2>Population density change in Vancouver</h2>
+      <div id="pd"><p>Hover over an area in Vancouver CMA!</p></div>
+    </div>
+    <div class="map-overlay" id="legend">
+        <p><strong>
+            Change in people per hectare
+        </strong>   
+        </p>
+    </div>
+
+</body>
+</html>
