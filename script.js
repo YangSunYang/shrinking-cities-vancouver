@@ -56,12 +56,10 @@ map.getCanvas().style.cursor = 'default';
 
 map.on('mousemove', (event) => {
     const areas = map.queryRenderedFeatures(event.point, {
-        layers: ['van-city-mapping-bq125j']
+        layers: ['van-city-mapping-0plhtx']
     });
     document.getElementById('pd').innerHTML = areas.length
-    ? `<p>${areas[0].properties['narrate']} <br>
-    <strong><em> That is ${Math.abs(Number(areas[0].properties['density_change_since_1971']) || 0)} people </em></strong> per hectare between 1971 and 2021.</p>`
-    : `<p>Hover over an area in Vancouver CMA!</p>`;
+    ? `<p>This dissemination area covers ${areas[0].properties['hectars']} hectares. Its population <strong>${areas[0].properties['narrate1']}</strong> from 1971 to 2021, resulting in <strong>${areas[0].properties['narrate2']}<strong>.</p>`
+    : `<p>Hover over an area in the City of Vancouver!</p>`;
 });
 });
-
